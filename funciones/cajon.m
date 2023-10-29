@@ -1,3 +1,3 @@
-function h = cajon(t)
-h = 1 .*(t >= -1/2 & t <= 1/2);
+function h = cajon(n,N)
+    h = 1 .*(n >= -N/2 & n <= N/2);
 end
