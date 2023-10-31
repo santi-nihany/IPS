@@ -1,6 +1,6 @@
-n = -20:20;  % Asegúrate de que n cubra el rango necesario
+n = -20:20;  
 x = zeros(size(n));
-x(n == 0) = 1;  % Establece un impulso en n=0
+x(n == 0) = 1; % delta en n=0
 
 y = sist1(n, x);
 
