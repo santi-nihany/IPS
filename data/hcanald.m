@@ -1,4 +1,4 @@
-function [n, h] = hcanald(numal);
+function [n, h] = hcanald(numal)
 % AnSyS
 % Año 2023
 % Práctica con utilitario 1 - Ejercicio 2
