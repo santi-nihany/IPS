@@ -1,6 +1,8 @@
 clear all;close all; clc;
-addpath('../funciones')
-addpath('../data')
+scriptDir = fileparts(mfilename('fullpath'));
+addpath(fullfile(scriptDir, '..', 'funciones/ej1'));
+addpath(fullfile(scriptDir, '..', 'funciones/ej2'));
+addpath(fullfile(scriptDir, '..', 'data'));
 % PUNTO 1
 numAl= 030123; % entrada de senial 
 [n,x] = senial(numAl);
