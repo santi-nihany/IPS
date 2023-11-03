@@ -3,6 +3,7 @@ scriptDir = fileparts(mfilename('fullpath'));
 addpath(fullfile(scriptDir, '..', 'funciones/ej2'));
 addpath(fullfile(scriptDir, '..', 'data'));
 
+
 % PUNTO 1
 numAl= 025023; 
 [n,h] = hcanald(numAl);
@@ -13,7 +14,7 @@ title('Señal');
 xlabel('Instantes (n)');
 ylabel('Amplitud (x)');
 grid on;
-pause(2);
+pause(1);
 
 % PUNTO 2
 x = zeros(size(n));
@@ -31,7 +32,7 @@ grid on;
 [x, fs] = audioread('audio.wav');
 plot(x);
 sound(x,fs);
-pause(length(x) / fs);
+pause(3);
 
 n = 0:length(x);
 
@@ -43,7 +44,7 @@ xlabel('Instantes (n)');
 ylabel('Amplitud (x)');
 grid on;
 sound(y,length(x))
-pause(length(y) / length(x));
+pause(3);
 
 yfilt= filtro(n,y);
 subplot(3,1,2);
@@ -53,7 +54,7 @@ xlabel('Instantes (n)');
 ylabel('Amplitud (x)');
 grid on;
 sound(yfilt,length(x))
-pause(length(yfilt) / length(x));
+pause(3);
 
 yfilt2= filtro2(n,y);
 subplot(3,1,3);

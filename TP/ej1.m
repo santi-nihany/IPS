@@ -1,7 +1,7 @@
 clear all;close all; clc;
 scriptDir = fileparts(mfilename('fullpath'));
 addpath(fullfile(scriptDir, '..', 'funciones/ej1'));
-addpath(fullfile(scriptDir, '..', 'funciones/ej2'));
+addpath(fullfile(scriptDir, '..', 'funciones'));
 addpath(fullfile(scriptDir, '..', 'data'));
 % PUNTO 1
 numAl= 030123; % entrada de senial 
@@ -12,6 +12,7 @@ title('Señal');
 xlabel('Instantes (n)');
 ylabel('Amplitud (x)');
 grid on;
+pause(2)
 
 X = TFTD(n,x); % TFTD de senial
 ds = 0.001; s = [-2:ds:2];
@@ -20,6 +21,7 @@ title('Transformada');
 xlabel('Tiempo (t)');
 ylabel('Amplitud (x)');
 grid on;
+pause(10);
 
 % PUNTO 3
 n = -20:20;
@@ -40,10 +42,14 @@ H4 = TFTD(n,h4); % respuesta en frecuencia sistema 4
 numAl= 030123;
 [n,x] = senial(numAl);
 S1 = sist1(n,x); % respuesta sistema 1 con entrada senial
+subplot(2,2,1);
 stem(n,S1)
 S2 = sist2(n,x); % respuesta sistema 2 con entrada senial
+subplot(2,2,2);
 stem(n,S2)
 S3 = sist3(n,x); % respuesta sistema 3 con entrada senial
+subplot(2,2,3);
 stem(n,S3)
 S4 = sist4(n,x); % respuesta sistema 4 con entrada senial
+subplot(2,2,4);
 stem(n,S4)

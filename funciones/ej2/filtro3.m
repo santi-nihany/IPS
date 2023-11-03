@@ -13,7 +13,7 @@ function y =filtro3(n,x)
         end
         
         if i > 35280
-            y(i) = y(i) - 0.041 * x(i - 35280);
+            y(i) = y(i) - 0.04100625 * x(i - 35280);
         end
     end
 end
