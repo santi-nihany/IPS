@@ -22,7 +22,7 @@ xlabel('Tiempo (t)');
 ylabel('Amplitud (x)');
 grid on;
 
-pause(3)
+pause(4)
 
 
 % PUNTO 3
@@ -62,7 +62,7 @@ xlabel('Instantes (n)');
 ylabel('Amplitud (x)');
 grid on;
 
-pause(5)
+pause(6)
 
 ds = 0.001; s = [-2:ds:2];
 
@@ -98,7 +98,7 @@ xlabel('Instantes (n)');
 ylabel('Frecuencia (s)');
 grid on;
 
-pause(5)
+pause(6)
 
 % PUNTO 4
 numAl= 030123;
@@ -136,7 +136,7 @@ xlabel('Instantes (n)');
 ylabel('Amplitud (x)');
 grid on;
 
-pause(3);
+pause(6);
 
 ds = 0.001; s = [-2:ds:2];
 
